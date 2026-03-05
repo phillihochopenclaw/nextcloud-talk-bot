@@ -1,0 +1,27 @@
+# Dependencies
+/vendor/
+
+# PHPUnit
+/.phpunit.cache/
+/coverage/
+/coverage.xml
+/clover.xml
+
+# IDE
+/.idea/
+/.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+/build/
+/dist/
+
+# Test artifacts
+.phpunit.result.cache
+.phpcs-cache

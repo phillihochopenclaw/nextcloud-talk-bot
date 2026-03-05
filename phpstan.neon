@@ -1,0 +1,22 @@
+parameters:
+	level: 8
+	
+	paths:
+		- lib/
+		- tests/
+	
+	excludePaths:
+		- tests/Integration/*
+	
+	tmpDir: .build/phpstan
+	
+	ignoreErrors:
+		# Nextcloud sometimes uses mixed types in legacy code
+		- '#Call to an undefined method OC\\.*#'
+		- '#Call to an undefined method OCP\\.*#'
+	
+	# Treat phpdoc types as authoritative
+	reportUnmatchedIgnoredErrors: false
+	
+	# Better error reporting
+	editorUrlFormat: 'vscode://file/%%file:%%line'
