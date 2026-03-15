@@ -7,35 +7,29 @@ declare(strict_types=1);
 namespace OCA\NextcloudTalkBot\AppInfo;
 
 use OCA\NextcloudTalkBot\Controller\SettingsController;
+use OCA\NextcloudTalkBot\Controller\WebhookController;
+use OCA\NextcloudTalkBot\Service\BotService;
+use OCA\NextcloudTalkBot\Service\MessageService;
 use OCA\NextcloudTalkBot\Service\SettingsService;
-use OCP\AppFramework\IAppContainer;
-use OCP\IConfig;
-use OCP\IRequest;
+use OCA\NextcloudTalkBot\Service\SignatureService;
+use OCP\AppFramework\App;
+use OCP\AppFramework\Bootstrap\IBootContext;
+use OCP\AppFramework\Bootstrap\IBootstrap;
+use OCP\AppFramework\Bootstrap\IRegistrationContext;
 
-class Application {
+class Application extends App implements IBootstrap {
+    public const APP_ID = 'nextcloudtalkbot';
 
-    public function __construct(
-        private IAppContainer $container
-    ) {
-        $this->register();
+    public function __construct() {
+        parent::__construct(self::APP_ID);
     }
 
-    private function register(): void {
-        // Register Settings Service
-        $this->container->registerService(SettingsService::class, function (IAppContainer $c) {
-            return new SettingsService(
-                $c->get(IConfig::class)
-            );
-        });
+    public function register(IRegistrationContext $context): void {
+        // Services are auto-wired by Nextcloud's DI container
+        // No manual registration needed for most services
+    }
 
-        // Register Settings Controller
-        $this->container->registerService(SettingsController::class, function (IAppContainer $c) {
-            return new SettingsController(
-                $c->get('AppName'),
-                $c->get(IRequest::class),
-                $c->get(IConfig::class),
-                $c->get(SettingsService::class)
-            );
-        });
+    public function boot(IBootContext $context): void {
+        // Boot logic if needed
     }
 }
