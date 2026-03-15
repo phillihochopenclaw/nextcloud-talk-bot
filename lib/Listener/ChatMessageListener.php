@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace OCA\TalkBot\Listener;
+namespace OCA\NextcloudTalkBot\Listener;
 
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 use OCP\ILogger;
-use OCA\TalkBot\Service\MessageService;
+use OCA\NextcloudTalkBot\Service\MessageService;
 
 /**
  * Listener for Nextcloud Talk chat messages

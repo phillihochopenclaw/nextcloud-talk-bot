@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace OCA\TalkBot\Service;
+namespace OCA\NextcloudTalkBot\Service;
 
 use OCP\Http\Client\IClient;
 use OCP\IConfig;

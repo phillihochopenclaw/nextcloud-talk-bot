@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace OCA\TalkBot\Controller;
+namespace OCA\NextcloudTalkBot\Controller;
 
-use OCA\TalkBot\Service\SettingsService;
+use OCA\NextcloudTalkBot\Service\SettingsService;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\JSONResponse;

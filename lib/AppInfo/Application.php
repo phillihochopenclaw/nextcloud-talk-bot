@@ -4,10 +4,10 @@
  */
 declare(strict_types=1);
 
-namespace OCA\TalkBot\AppInfo;
+namespace OCA\NextcloudTalkBot\AppInfo;
 
-use OCA\TalkBot\Controller\SettingsController;
-use OCA\TalkBot\Service\SettingsService;
+use OCA\NextcloudTalkBot\Controller\SettingsController;
+use OCA\NextcloudTalkBot\Service\SettingsService;
 use OCP\AppFramework\IAppContainer;
 use OCP\IConfig;
 use OCP\IRequest;

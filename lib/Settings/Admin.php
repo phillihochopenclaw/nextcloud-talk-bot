@@ -4,9 +4,9 @@
  */
 declare(strict_types=1);
 
-namespace OCA\TalkBot\Settings;
+namespace OCA\NextcloudTalkBot\Settings;
 
-use OCA\TalkBot\Service\SettingsService;
+use OCA\NextcloudTalkBot\Service\SettingsService;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IInitialStateService;
 use OCP\Settings\ISettings;
